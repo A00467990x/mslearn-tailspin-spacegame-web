@@ -31,9 +31,9 @@ steps:
   displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
-- task: gulp@1
-#- script: ".node_modules/.bin/gulp"
-  displayName: 'Run gulp tasks'
+# - task: gulp@1
+# #- script: ".node_modules/.bin/gulp"
+#   displayName: 'Run gulp tasks'
   # inputs:
   #   gulpFile: 'gulp.js'
 
