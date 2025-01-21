@@ -27,17 +27,15 @@ steps:
 #- script: 'npx sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
 
-
-
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
   displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
-# - task: gulp@1
-# #- script: ".node_modules/.bin/gulp"
-#   displayName: 'Run gulp tasks'
-#   inputs:
-#     gulpFile: 'gulp.js'
+- task: gulp@1
+#- script: ".node_modules/.bin/gulp"
+  displayName: 'Run gulp tasks'
+  inputs:
+    gulpFile: 'gulp.js'
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
