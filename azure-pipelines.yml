@@ -21,7 +21,7 @@ steps:
     verbose: false
 
 #- task: Npm@1
-- script: 'npm install -g gulp-cli'
+- script: 'sudo npm install -g gulp-cli'
   displayName: 'Install Gulp CLI Globally'
   # inputs:
   #   command: 'custom'
