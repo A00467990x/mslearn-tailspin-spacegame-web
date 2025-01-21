@@ -15,11 +15,13 @@ steps:
     version: '9.x'
 
 - task: Npm@1
-  displayName: 'Run npm install and install Gulp CLI globally'
+  displayName: 'Run npm install'
   inputs:
-    command: 'custom'
+    command: 'install'
     verbose: false
-    customCommand: 'install && install -g gulp-cli'
+
+- script: 'npx install -g gulp-cli'
+  displayName: 'Install Gulp CLI Globally'
 
 - script: 'npx sass Tailspin.SpaceGame.Web/wwwroot:Tailspin.SpaceGame.Web/wwwroot'
 #- script: 'npx sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
