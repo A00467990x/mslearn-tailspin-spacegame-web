@@ -34,8 +34,8 @@ steps:
 - task: gulp@1
 #- script: ".node_modules/.bin/gulp"
   displayName: 'Run gulp tasks'
-  inputs:
-    gulpFile: 'gulp.js'
+  # inputs:
+  #   gulpFile: 'gulp.js'
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
