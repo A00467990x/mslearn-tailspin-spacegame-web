@@ -265,6 +265,8 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules/
 
+vsts-agent-osx-x64-4.248.0/
+
 # Visual Studio 6 build log
 *.plg
 
