@@ -20,12 +20,13 @@ steps:
     command: 'install'
     verbose: false
 
-- task: Npm@1
+#- task: Npm@1
+- script: 'npm install -g gulp-cli'
   displayName: 'Install Gulp CLI Globally'
-  inputs:
-    command: 'custom'
-    workingDir: '$(Build.SourcesDirectory)'
-    customCommand: 'install -g gulp-cli'
+  # inputs:
+  #   command: 'custom'
+  #   workingDir: '$(Build.SourcesDirectory)'
+  #   customCommand: 'install -g gulp-cli'
 
 - script: 'npx sass Tailspin.SpaceGame.Web/wwwroot:Tailspin.SpaceGame.Web/wwwroot'
 #- script: 'npx sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
