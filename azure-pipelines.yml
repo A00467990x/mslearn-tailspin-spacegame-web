@@ -20,7 +20,7 @@ steps:
     command: 'install'
     verbose: false
 
-- script: 'npx install -g gulp-cli'
+- script: 'npx install gulp-cli'
   displayName: 'Install Gulp CLI Globally'
 
 - script: 'npx sass Tailspin.SpaceGame.Web/wwwroot:Tailspin.SpaceGame.Web/wwwroot'
