@@ -24,10 +24,10 @@ steps:
   inputs:
     verbose: false
 
-- script: 'npx sass Tailspin.SpaceGame.Web/wwwroot:Tailspin.SpaceGame.Web/wwwroot'
-  displayName: 'Compile Sass assets'
+# - script: 'npx sass Tailspin.SpaceGame.Web/wwwroot:Tailspin.SpaceGame.Web/wwwroot'
+#   displayName: 'Compile Sass assets'
 
-- script: 'npm install -g gulp@1'
+# - script: 'npm install -g gulp@1'
 
 - task: gulp@1
   displayName: 'Run gulp tasks'
