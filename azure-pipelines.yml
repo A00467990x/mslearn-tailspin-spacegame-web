@@ -27,7 +27,7 @@ steps:
 - script: 'npx sass Tailspin.SpaceGame.Web/wwwroot:Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
 
-- script: 'npx gulp@1'
+- script: 'npm install -g gulp@1'
 
 - task: gulp@1
   displayName: 'Run gulp tasks'
