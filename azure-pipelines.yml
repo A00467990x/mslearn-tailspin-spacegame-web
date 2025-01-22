@@ -10,9 +10,15 @@ pool:
 variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '9.x'
+  dotnetSdkVersion: '8.x'
 
 steps:
+
+- task: DotNetCoreInstaller@1
+  inputs:
+    packageType: 'sdk' # 'runtime' | 'sdk'. Required. Package to install. Default: sdk.
+    version: '$(dotnetSdkVersion)'
+
 - task: UseDotNet@2
   displayName: 'Use .NET SDK $(dotnetSdkVersion)'
   inputs:
@@ -45,6 +51,20 @@ steps:
     command: 'build'
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '**/*.csproj'
+
+- task: UseDotNet@2
+  displayName: 'Use .NET SDK 6.0.24'
+  inputs:
+    version: '6.0.24'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Run unit tests - $(buildConfiguration)'
+  inputs:
+    command: 'test'
+    arguments: '--no-build --configuration $(buildConfiguration)'
+    projects: '**/*.Tests.csproj'
+
+  
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - $(buildConfiguration)'
