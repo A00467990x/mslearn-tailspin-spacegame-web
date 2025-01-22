@@ -50,7 +50,7 @@ steps:
 - task: UseDotNet@2
   displayName: 'Use .NET SDK 6.0.24'
   inputs:
-    version: '6.0.24'
+    version: '8.0'
 
 - task: DotNetCoreCLI@2
   displayName: 'Run unit tests - $(buildConfiguration)'
