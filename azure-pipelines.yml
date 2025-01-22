@@ -14,11 +14,6 @@ variables:
 
 steps:
 
-- task: DotNetCoreInstaller@1
-  inputs:
-    packageType: 'sdk' # 'runtime' | 'sdk'. Required. Package to install. Default: sdk.
-    version: '$(dotnetSdkVersion)'
-
 - task: UseDotNet@2
   displayName: 'Use .NET SDK $(dotnetSdkVersion)'
   inputs:
